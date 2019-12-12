@@ -1,5 +1,5 @@
 const Game = require('../models/Game');
-let gameObj = require('../models/gameObj');
+const gameObj = require('../models/gameObj');
 
 /**
  * query - Queries MongoDB database for objects
@@ -13,7 +13,6 @@ function query (input) {
     query.exec((err, game) => {
       if (err || game === null) {
         console.log('Game not found');
-        gameObj = null;
         resolve(gameObj);
       } else {
         gameObj.name = game.name;
