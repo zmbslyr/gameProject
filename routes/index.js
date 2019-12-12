@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const query = require('../controllers/query');
-var gameObj = require('../models/gameObj');
+let gameObj = require('../models/gameObj');
 
 var search;
 
