@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
 // POST form
 router.post('/submit-form', async (req, res, next) => {
   search = req.body.title;
-  const gameObj = await query(search);
+  gameObj = await query(search);
   res.render('obj', { name: gameObj.name, dev: gameObj.developer, rel: gameObj.releaseDate });
 });
 
