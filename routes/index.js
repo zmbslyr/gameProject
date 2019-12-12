@@ -17,7 +17,7 @@ router.get('/', (req, res, next) => {
 router.post('/submit-form', async (req, res, next) => {
   search = req.body.title;
   gameObj = await query(search);
-  if (gameObj.name === 'placeholder') {
+  if (gameObj.name !== search) {
     res.render('gameNotFound', { message: 'Game not found', desc: `"${search}" not found in library` });
   } else {
     res.render('obj', { name: gameObj.name, dev: gameObj.developer, rel: gameObj.releaseDate });
