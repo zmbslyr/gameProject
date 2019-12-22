@@ -13,14 +13,19 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
+/* GET about page. */
+router.get('/about', (req, res, next) => {
+  res.render('about', { title: 'About' });
+});
+
 // POST form
 router.post('/submit-form', async (req, res, next) => {
   search = req.body.title;
   gameObj = await query(search);
   if (gameObj.name !== search) {
-    res.render('gameNotFound', { message: 'Game not found', desc: `"${search}" not found in library` });
+    res.render('gameNotFound', { title: 'Game Not Found', message: 'Game not found', desc: `"${search}" not found in library` });
   } else {
-    res.render('obj', { name: gameObj.name, dev: gameObj.developer, rel: gameObj.releaseDate });
+    res.render('obj', { title: gameObj.name, name: gameObj.name, dev: gameObj.developer, rel: gameObj.releaseDate });
   }
 });
 

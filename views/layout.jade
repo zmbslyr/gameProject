@@ -2,6 +2,13 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='/stylesheets/gameobj.css', rel='stylesheet')
+  body
+    div#header
+      ul#links
+        li
+          a(href='/') Home
+        li#about
+          a(href='/about') About
   body
     block content

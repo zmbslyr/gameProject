@@ -1,0 +1,43 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: lightgray;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: lightgrey;
+}
+
+li a:hover {
+    background-color: antiquewhite;
+}
+
+#about {
+    float: right;
+}
+
+#content {
+    background-color: antiquewhite;
+    text-align: center;
+    height: 100%;
+}
