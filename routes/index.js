@@ -10,7 +10,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index');
+  res.render('index', { title: 'Home' });
 });
 
 /* GET about page. */

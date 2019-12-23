@@ -36,8 +36,30 @@ li a:hover {
     float: right;
 }
 
-#content {
+#gameObjContent {
     background-color: antiquewhite;
     text-align: center;
     height: 100%;
+}
+
+input[type=text] {
+    width: 80%;
+    float: left;
+    border: 2px solid grey;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+input[type=submit] {
+    width: 19%;
+    border: none;
+    position: relative;
+    float: right;
+    text-align: center;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 20px;
 }
