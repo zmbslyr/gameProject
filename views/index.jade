@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  form(action='/submit-form', method='post')
+  form(action='/submit-form', method='POST')
     div.input
-      input(type="text", name="title")
+      input#term.form-control(type="text", placeholder="Search" name="title")
     div.actions
       input(type="submit", value="search")
